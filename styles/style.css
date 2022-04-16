@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin:0px;
+    padding:0px;
+}
+
+header {
+    display:flex;
+    align-content: center;
+    flex-direction: column;
+    background-color: rgb(19, 103, 214);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 20px 0px 20px;
+    box-shadow: -1px 13px 10px rgba(0, 0, 0, 0.13);
+
+}
+
+header h1 {margin-bottom:15px;}
+
+header h2{
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+header a{
+    text-decoration: none;
+    color: #ffffff
+}
+
+header a:hover{
+    text-decoration:underline
+}
+
+section {
+    border: 1px solid black;
+    padding: 15px;
+    margin: auto;
+    max-width: 400px;
+    min-width: 270px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+section h1, p{line-height: 2em;}
+
+section p.inline{display: inline-block;}
+
+legend{text-align: center; padding-bottom:10px;}
+
+div.bi{
+    padding-bottom: 5px;
+    position: relative;
+    
+}
+
+div.bis{
+    display:flex;
+    flex-direction: column;
+    gap: 10px 30px;
+    
+}
+
+label{
+    display: block;
+    float: left;
+    font-size: 1.5em;    
+    line-height: 40px;
+}
+
+input[type="number"]{
+    display: block;
+    font-size: 3.5vh;
+    padding-left: 10px;
+    padding-right: 10px; ;
+    line-height: 30px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    width: 40px;
+    color: #010307;
+    border-bottom: 2px solid rgba(0, 0, 0);
+    position: absolute;
+    transform: translatex(550%)    
+}
+
+input[type="number"]:focus{
+    box-shadow: 0 0 0 0;    
+    outline: none;
+    border-bottom: 3px solid rgb(173, 23, 23);  
+}
+
+div.button{
+    padding-top: 20px;
+    text-align: center;
+}
+
+input[type="button"]{
+    background-color: green;
+    color: white; 
+    font-size: 1.5em;
+    width: 200px;
+    padding: 5px;
+    border: 4px solid rgb(15, 97, 15);
+    border-radius: 3px;
+    transition: all 0.10s ease-in;    
+} 
+
+input[type="button"].enter{
+    transform: translate(-2px, -5px);
+    box-shadow: 2px 5px 0 rgb(15, 97, 15);                
+}
+
+input[type="button"].touchenter{
+    background-color: rgb(24, 155, 24);         
+}
+
+input[type="button"].mousedown{
+    transform: translate(-2px, -3px);
+    box-shadow: 2px 3px 0 rgb(15, 97, 15);
+}
+
+div#text{
+    display:none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius:5px;
+    margin-top: 6px;
+    margin-right: 1px;    
+    box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.435);
+    transition: 0.5s;
+}
+
+div#text:hover{
+    transform: translate(-2px, -5px);
+    box-shadow: 6px 6px 5px 0px rgb(0 0 0 / 44%);
+}
+
+div#text .x{
+    float: right;
+    margin-right:10px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+div#text h1, h2, p{
+    padding-left: 10px; 
+    border-radius:4px 4px 0px 0px;
+}
+
+.inline{display: inline-block;}
+
+h1.invalid{
+    background-color: rgb(173, 23, 23);
+    text-align: center;
+    
+}
+
+p.invalid{
+    font-size:.89em;
+    text-align:center;
+}
+
+p#sit{
+    padding: 0;
+    font-size: 1.3em;
+}
+p#md{padding:0}
+
+
+@media(max-width: 485px){
+    header h1{font-size:1.3em;}
+    section{padding:7px;}
+    input[type="number"]{transform: translatex(500%)}
+}
+
+@media(max-width: 395px){
+    input[type="number"]{transform: translatex(450%)}
+}
+
+@media(max-width: 350px){
+    input[type="number"]{transform: translatex(400%)}
+}
+
+@media(max-width: 332px){
+    section{padding:4px;}
+    input[type="number"]{transform: translatex(325%)}
+    div#text h1, h2, p{padding-left: 5px;}
+}

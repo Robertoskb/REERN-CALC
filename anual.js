@@ -79,7 +79,8 @@ function get_sit(md, studying, final_test) {
     const mdf = md.toFixed(1)
 
     sits = {
-        'Aprovado': [!final_test && !studying && mdf >= 6, final_test && mdf >= 5],
+        'Aprovado': [!final_test && !studying && mdf >= 6, final_test && mdf >= 5, 
+                     !final_test && studying && mdf >= 6],
         'Reprovado': [!final_test && !studying && mdf < 2.5, final_test && mdf < 5],
         'Cursando': [!final_test && studying && 2.5 < mdf < 6],
         'Prova Final': [!studying && 2.5 < mdf < 6]
